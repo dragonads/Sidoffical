@@ -7,6 +7,27 @@
   <title>BDG WIN Official</title>
   <meta name="description" content="BDG WIN Official Telegram Community">
 
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+
+  fbq('init', '1616610216851879');
+  fbq('track', 'PageView');
+  </script>
+
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1616610216851879&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -19,18 +40,14 @@
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       min-height: 100vh;
       font-family: "Inter", sans-serif;
-      background:
-        radial-gradient(circle at 50% 15%, rgba(255, 25, 25, 0.13), transparent 30%),
-        radial-gradient(circle at 10% 90%, rgba(255, 0, 0, 0.07), transparent 30%),
-        #050505;
       color: #fff;
+      background:
+        radial-gradient(circle at 50% 12%, rgba(255, 25, 25, .14), transparent 30%),
+        radial-gradient(circle at 10% 90%, rgba(255, 0, 0, .07), transparent 30%),
+        #050505;
       overflow-x: hidden;
     }
 
@@ -40,14 +57,13 @@
       inset: 0;
       pointer-events: none;
       background:
-        linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+        linear-gradient(rgba(255,255,255,.014) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.014) 1px, transparent 1px);
       background-size: 35px 35px;
       mask-image: linear-gradient(to bottom, black, transparent);
     }
 
     .page {
-      width: 100%;
       min-height: 100vh;
       display: flex;
       justify-content: center;
@@ -60,25 +76,26 @@
       text-align: center;
     }
 
-    /* TOP BADGE */
+    /* BADGE */
 
     .badge {
       display: inline-flex;
       align-items: center;
       gap: 8px;
       padding: 8px 15px;
-      border: 1px solid rgba(255, 45, 45, 0.45);
+      margin-bottom: 20px;
+
+      border: 1px solid rgba(255,45,45,.4);
       border-radius: 50px;
-      background: rgba(255, 20, 20, 0.06);
-      box-shadow:
-        0 0 20px rgba(255, 0, 0, 0.08),
-        inset 0 0 15px rgba(255, 0, 0, 0.03);
-      color: #e9e9e9;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
+      background: rgba(255,20,20,.05);
+
+      color: #ddd;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.4px;
       text-transform: uppercase;
-      margin-bottom: 22px;
+
+      box-shadow: 0 0 25px rgba(255,0,0,.06);
     }
 
     .live-dot {
@@ -95,8 +112,9 @@
         opacity: 1;
         transform: scale(1);
       }
+
       50% {
-        opacity: .45;
+        opacity: .4;
         transform: scale(.7);
       }
     }
@@ -104,8 +122,8 @@
     /* LOGO */
 
     .logo-wrap {
-      width: min(82vw, 350px);
-      margin: 0 auto 20px;
+      width: min(58vw, 250px);
+      margin: 0 auto 18px;
       position: relative;
     }
 
@@ -113,7 +131,7 @@
       content: "";
       position: absolute;
       inset: 12%;
-      background: rgba(255, 0, 0, 0.13);
+      background: rgba(255,0,0,.13);
       filter: blur(45px);
       border-radius: 50%;
       z-index: -1;
@@ -125,37 +143,38 @@
       display: block;
       object-fit: contain;
       border-radius: 50%;
+
       filter:
-        drop-shadow(0 0 10px rgba(255, 0, 0, 0.25))
-        drop-shadow(0 0 30px rgba(255, 0, 0, 0.10));
+        drop-shadow(0 0 10px rgba(255,0,0,.28))
+        drop-shadow(0 0 28px rgba(255,0,0,.12));
     }
 
     /* TITLE */
 
     .title {
       font-size: clamp(28px, 8vw, 42px);
+      line-height: 1.05;
       font-weight: 900;
       letter-spacing: -1.5px;
-      line-height: 1.05;
       text-transform: uppercase;
-      margin-top: 4px;
     }
 
-    .title .white {
-      color: #ffffff;
+    .white {
+      color: #fff;
     }
 
-    .title .red {
+    .red {
       color: #ff3030;
       text-shadow:
-        0 0 10px rgba(255, 0, 0, 0.45),
-        0 0 25px rgba(255, 0, 0, 0.18);
+        0 0 10px rgba(255,0,0,.4),
+        0 0 25px rgba(255,0,0,.16);
     }
 
     .subtitle {
-      margin: 13px auto 0;
       max-width: 350px;
-      color: #a7a7a7;
+      margin: 12px auto 0;
+
+      color: #999;
       font-size: 13px;
       line-height: 1.6;
     }
@@ -167,8 +186,10 @@
       justify-content: center;
       align-items: center;
       gap: 8px;
-      margin: 21px auto 22px;
-      color: #d8d8d8;
+
+      margin: 20px auto 22px;
+
+      color: #bbb;
       font-size: 12px;
       font-weight: 600;
     }
@@ -181,23 +202,32 @@
     .member-dot {
       width: 5px;
       height: 5px;
-      background: #ff3030;
       border-radius: 50%;
-      box-shadow: 0 0 8px rgba(255, 0, 0, .7);
+      background: #ff3030;
+      box-shadow: 0 0 8px rgba(255,0,0,.7);
     }
 
-    /* MAIN CARD */
+    /* CARD */
 
     .card {
       position: relative;
       padding: 24px 20px 22px;
+
       border-radius: 24px;
+
       background:
-        linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.018));
-      border: 1px solid rgba(255,255,255,.09);
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.055),
+          rgba(255,255,255,.015)
+        );
+
+      border: 1px solid rgba(255,255,255,.08);
+
       box-shadow:
         0 20px 60px rgba(0,0,0,.55),
         0 0 35px rgba(255,0,0,.04);
+
       overflow: hidden;
     }
 
@@ -209,50 +239,59 @@
       top: -100px;
       left: 50%;
       transform: translateX(-50%);
-      background: rgba(255, 0, 0, .08);
+
+      background: rgba(255,0,0,.08);
       filter: blur(55px);
       border-radius: 50%;
     }
 
     .card-label {
       position: relative;
-      font-size: 11px;
-      font-weight: 800;
-      color: #cfcfcf;
-      letter-spacing: 1.8px;
-      text-transform: uppercase;
       margin-bottom: 17px;
+
+      color: #cfcfcf;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.7px;
+      text-transform: uppercase;
     }
 
-    /* BUTTON */
+    /* JOIN BUTTON */
 
     .join-btn {
       position: relative;
-      width: 100%;
-      min-height: 62px;
-      border: 0;
-      border-radius: 16px;
+
+      width: min(82%, 330px);
+      min-height: 60px;
+      margin: 0 auto;
+
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 11px;
+      gap: 10px;
 
       color: #fff;
       text-decoration: none;
-      font-size: 16px;
+
+      font-size: 15px;
       font-weight: 900;
-      letter-spacing: .7px;
+      letter-spacing: .6px;
       text-transform: uppercase;
 
       background:
         linear-gradient(135deg, #ff3434, #c90000);
 
-      box-shadow:
-        0 8px 30px rgba(255, 0, 0, .24),
-        inset 0 1px 0 rgba(255,255,255,.20);
+      border-radius: 15px;
 
-      transition: transform .2s ease, box-shadow .2s ease;
+      box-shadow:
+        0 8px 30px rgba(255,0,0,.25),
+        inset 0 1px 0 rgba(255,255,255,.2);
+
       overflow: hidden;
+
+      transition:
+        transform .2s ease,
+        box-shadow .2s ease;
     }
 
     .join-btn::before {
@@ -260,14 +299,18 @@
       position: absolute;
       top: 0;
       left: -120%;
+
       width: 70%;
       height: 100%;
-      background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255,255,255,.25),
-        transparent
-      );
+
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          rgba(255,255,255,.25),
+          transparent
+        );
+
       transform: skewX(-20deg);
       animation: shine 3.2s infinite;
     }
@@ -276,6 +319,7 @@
       0% {
         left: -120%;
       }
+
       45%,100% {
         left: 150%;
       }
@@ -283,9 +327,10 @@
 
     .join-btn:hover {
       transform: translateY(-2px);
+
       box-shadow:
-        0 12px 38px rgba(255, 0, 0, .32),
-        inset 0 1px 0 rgba(255,255,255,.20);
+        0 12px 38px rgba(255,0,0,.32),
+        inset 0 1px 0 rgba(255,255,255,.2);
     }
 
     .join-btn:active {
@@ -293,8 +338,8 @@
     }
 
     .telegram-icon {
-      width: 24px;
-      height: 24px;
+      width: 23px;
+      height: 23px;
       position: relative;
       z-index: 2;
     }
@@ -304,69 +349,73 @@
       z-index: 2;
     }
 
-    /* INFO */
+    /* INFO BOXES */
 
     .info-row {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 9px;
+
       margin-top: 12px;
     }
 
     .info-box {
       min-height: 72px;
-      border-radius: 14px;
       padding: 12px 6px;
+
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+
+      border-radius: 14px;
       background: rgba(255,255,255,.025);
       border: 1px solid rgba(255,255,255,.07);
     }
 
     .info-icon {
-      font-size: 17px;
+      font-size: 16px;
       margin-bottom: 6px;
       filter: grayscale(1);
     }
 
     .info-title {
-      color: #f3f3f3;
-      font-size: 10px;
+      color: #eee;
+      font-size: 9px;
       font-weight: 800;
-      letter-spacing: .4px;
     }
 
     .info-text {
-      color: #777;
-      font-size: 9px;
       margin-top: 3px;
+      color: #707070;
+      font-size: 8px;
     }
 
     /* COUNTDOWN */
 
     .count-wrap {
-      margin-top: 22px;
-      padding: 15px;
+      margin-top: 21px;
+      padding: 14px;
+
       border-radius: 15px;
-      background: rgba(255, 255, 255, .025);
+      background: rgba(255,255,255,.025);
       border: 1px solid rgba(255,255,255,.06);
     }
 
     .count-label {
-      color: #858585;
-      font-size: 10px;
+      margin-bottom: 6px;
+
+      color: #777;
+      font-size: 9px;
       font-weight: 700;
-      letter-spacing: 1.2px;
+      letter-spacing: 1.1px;
       text-transform: uppercase;
-      margin-bottom: 7px;
     }
 
     .countdown {
-      font-size: 25px;
-      font-weight: 900;
       color: #fff;
+      font-size: 24px;
+      font-weight: 900;
       letter-spacing: 2px;
     }
 
@@ -378,24 +427,26 @@
     /* FOOTER */
 
     .footer {
-      margin-top: 23px;
-      color: #555;
-      font-size: 10px;
+      margin-top: 22px;
+
+      color: #505050;
+      font-size: 9px;
       line-height: 1.6;
     }
 
     .footer strong {
-      color: #888;
+      color: #777;
     }
 
     @media (max-width: 380px) {
+
       .page {
         padding-left: 12px;
         padding-right: 12px;
       }
 
       .logo-wrap {
-        width: min(78vw, 300px);
+        width: 55vw;
       }
 
       .card {
@@ -403,7 +454,8 @@
       }
 
       .join-btn {
-        min-height: 58px;
+        width: 86%;
+        min-height: 57px;
         font-size: 14px;
       }
     }
@@ -413,6 +465,7 @@
 <body>
 
   <main class="page">
+
     <div class="container">
 
       <div class="badge">
@@ -420,10 +473,10 @@
         Official Telegram Community
       </div>
 
+      <!-- LOGO -->
       <div class="logo-wrap">
-        <!-- Rename your uploaded logo to logo.jpg -->
         <img
-          src="IMG_20260830_152850_071.jpg"
+          src="logo.jpg"
           alt="BDG WIN Official"
           class="logo"
         >
@@ -439,8 +492,9 @@
         with the latest updates.
       </p>
 
+      <!-- MEMBERS -->
       <div class="members">
-        <strong>2K+ Members</strong>
+        <strong>10K+ Members</strong>
         <span class="member-dot"></span>
         Active Community
       </div>
@@ -451,13 +505,16 @@
           Join the official channel
         </div>
 
-        <!-- DIRECT TELEGRAM LINK — NO REDIRECT -->
+        <!-- DIRECT TELEGRAM LINK -->
+        <!-- TelegramClick tracking -->
         <a
           class="join-btn"
-          href="https://t.me/+uyB89HyfAbg1ZDRl"
+          href="https://t.me/+mJUfuFVM-0pkM2I9"
           target="_blank"
           rel="noopener noreferrer"
+          onclick="fbq('trackCustom', 'TelegramClick');"
         >
+
           <svg
             class="telegram-icon"
             viewBox="0 0 24 24"
@@ -470,14 +527,18 @@
             />
           </svg>
 
-          <span class="btn-text">Join Telegram Now</span>
+          <span class="btn-text">
+            JOIN TELEGRAM NOW
+          </span>
+
         </a>
 
+        <!-- INFO -->
         <div class="info-row">
 
           <div class="info-box">
             <div class="info-icon">👥</div>
-            <div class="info-title">2K+ Members</div>
+            <div class="info-title">10K+ Members</div>
             <div class="info-text">Growing Community</div>
           </div>
 
@@ -495,7 +556,9 @@
 
         </div>
 
+        <!-- COUNTDOWN -->
         <div class="count-wrap">
+
           <div class="count-label">
             Your invitation expires in
           </div>
@@ -503,6 +566,7 @@
           <div class="countdown">
             <span id="timer">00:20</span>
           </div>
+
         </div>
 
       </section>
@@ -513,18 +577,17 @@
       </div>
 
     </div>
-  </main>
 
+  </main>
 
   <script>
     let seconds = 20;
     const timer = document.getElementById("timer");
 
     function updateTimer() {
-      const formatted =
-        "00:" + String(seconds).padStart(2, "0");
 
-      timer.textContent = formatted;
+      timer.textContent =
+        "00:" + String(seconds).padStart(2, "0");
 
       if (seconds > 0) {
         seconds--;
@@ -538,4 +601,4 @@
   </script>
 
 </body>
-  </html>
+          </html>
